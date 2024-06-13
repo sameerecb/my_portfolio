@@ -1,16 +1,18 @@
-# This is a sample Python script.
+import streamlit as st
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+st.set_page_config(layout="wide")
+col1, col2 = st.columns(2)
 
+with col1:
+    st.image("images/photo.jpg")
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+with col2:
+    st.title("Sameer Bansal")
+    content = """ Hi, My name is Sameer Bansal. 
+    I am a solution architect and working on SAP HANA Projects.
+    I have worked in multiple organisation and with many clients
+    to support their infrastructure hosted on cloud as well on prim. 
+     I currently work on SAP HANA solution for different hardware."""
+    st.write(content)
+    st.info(content)  # For different appearance
 
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
